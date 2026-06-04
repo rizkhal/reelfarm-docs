@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>User Data Deletion - Socialmix</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="header">
+        <div class="brand">
+          <strong>Socialmix</strong>
+          <span>User Data Deletion</span>
+        </div>
+        <nav class="nav" aria-label="Legal pages">
+          <a href="./index.html">Home</a>
+          <a href="./privacy-policy.html">Privacy Policy</a>
+        </nav>
+      </header>
+
+      <article class="card">
+        <p class="muted">Last updated: June 4, 2026</p>
+        <h1>User Data Deletion</h1>
+        <p>
+          Socialmix is a self-hosted tool. The operator who runs the deployment
+          controls the local database, video storage, Facebook Page token, and
+          generated media files.
+        </p>
+
+        <h2>Remove Facebook Access</h2>
+        <ol>
+          <li>Open Facebook Settings.</li>
+          <li>Go to Business Integrations or Apps and Websites.</li>
+          <li>Find Socialmix.</li>
+          <li>Remove the app to revoke its access to your Facebook account or Page.</li>
+        </ol>
+
+        <h2>Delete Data From a Socialmix Deployment</h2>
+        <p>
+          To delete data stored by Socialmix, contact the app operator who runs
+          the deployment and manages the connected Facebook Page. Ask them to
+          delete your related videos, generated clips, transcripts, publish
+          history, and stored Facebook access token.
+        </p>
+
+        <h2>Self-Hosted Operator Deletion Steps</h2>
+        <p>
+          If you are the deployment operator, remove the Facebook token from
+          environment variables, delete related database records, and delete
+          related files from the storage directory.
+        </p>
+        <ul>
+          <li>Remove <code>FACEBOOK_PAGE_ACCESS_TOKEN</code> from the deployment environment.</li>
+          <li>Delete related video, segment, subtitle, transcript, and thumbnail files.</li>
+          <li>Delete related database rows from the Socialmix database.</li>
+          <li>Restart the API and worker after changing environment variables.</li>
+        </ul>
+
+        <h2>Deletion Confirmation</h2>
+        <p>
+          The deployment operator should confirm deletion after the related local
+          records and files have been removed.
+        </p>
+      </article>
+
+      <footer class="footer">
+        <a href="./index.html">Back to legal home</a>
+      </footer>
+    </main>
+  </body>
+</html>
